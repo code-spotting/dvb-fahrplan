@@ -7,24 +7,24 @@
     android:background="?attr/main_background_color"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/activity_main_frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/activity_main_bottom_navigation_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/activity_main_bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/main_background_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/activity_main_bottom_navigation" />
+
+    <FrameLayout
+        android:id="@+id/activity_main_frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/activity_main_bottom_navigation" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bottom_navigation_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
